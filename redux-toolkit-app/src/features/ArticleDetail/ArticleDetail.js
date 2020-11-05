@@ -8,7 +8,7 @@ const ArticleDetail = () => {
         // do nothing
     }
     const articleDetail = useSelector((state) => {
-        let article = state.articles.find((article) => article.id === id)
+        let article = state.articles.find((article) => Number(article.id) === Number(id) )
         return article
     })
     return (

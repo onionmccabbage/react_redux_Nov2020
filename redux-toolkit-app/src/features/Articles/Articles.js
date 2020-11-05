@@ -5,6 +5,20 @@ import { useDispatch, useSelector } from 'react-redux'
 // we might be using router links
 import { Link } from 'react-router-dom'
 
+// configureStore 
+//accepts a single object with named fields, instead of multiple function arguments, so we need to pass our reducer function as a field named reducer
+// createReducer 
+// lets you write reducers using a "lookup table" object, where each key in the object is a Redux action type string, and the values are reducer functions
+// createAction 
+//accepts an action type string as an argument, and returns an action creator function that uses that type string. (Yes, this means the name is a bit incorrect - we're creating an "action creator function", not an "action object", but it's shorter and easier to remember than createActionCreator.) 
+// createSlice 
+//returns a "slice" object that contains the generated reducer function as a field named reducer, and the generated action creators inside an object called actions
+// From <https://redux-toolkit.js.org/tutorials/basic-tutorial> 
+// createSlice
+// A function that accepts an initial state, an object full of reducer functions, and a "slice name", and automatically generates action creators and action types that correspond to the reducers and state
+// From <https://redux-toolkit.js.org/api/createSlice>
+
+
 // now we get our actions from articleSlice
 import { selectArticles, addArticle, removeArticle } from './articleSlice'
 
